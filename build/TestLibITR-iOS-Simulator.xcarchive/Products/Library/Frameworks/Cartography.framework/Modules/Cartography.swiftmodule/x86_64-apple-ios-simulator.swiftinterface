@@ -1,0 +1,476 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios8.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Cartography
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import Cartography
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@discardableResult
+public func align(top items: [Cartography.SupportsTopLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(top first: Cartography.SupportsTopLayoutProxy, _ rest: Cartography.SupportsTopLayoutProxy...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(right items: [Cartography.SupportsRightLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(right first: Cartography.SupportsRightLayoutProxy, _ rest: Cartography.SupportsRightLayoutProxy...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(bottom items: [Cartography.SupportsBottomLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(bottom first: Cartography.SupportsBottomLayoutProxy, _ rest: Cartography.SupportsBottomLayoutProxy...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(left items: [Cartography.SupportsLeftLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(left first: Cartography.SupportsLeftLayoutProxy, _ rest: Cartography.SupportsLeftLayoutProxy...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(leading items: [Cartography.SupportsLeadingLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(leading first: Cartography.SupportsLeadingLayoutProxy, _ rest: Cartography.SupportsLeadingLayoutProxy...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(trailing items: [Cartography.SupportsTrailingLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(trailing first: Cartography.SupportsTrailingLayoutProxy, _ rest: Cartography.SupportsTrailingLayoutProxy...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(centerX items: [Cartography.SupportsCenterXLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(centerX first: Cartography.SupportsCenterXLayoutProxy, _ rest: Cartography.SupportsCenterXLayoutProxy...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(centerY items: [Cartography.SupportsCenterYLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(centerY first: Cartography.SupportsCenterYLayoutProxy, _ rest: Cartography.SupportsCenterYLayoutProxy...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(baseline items: [Cartography.SupportsBaselineLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func align(baseline first: Cartography.SupportsBaselineLayoutProxy, _ rest: Cartography.SupportsBaselineLayoutProxy...) -> [UIKit.NSLayoutConstraint]
+public protocol AutoresizingMaskLayoutProxy : Cartography.LayoutProxy {
+  var translatesAutoresizingMaskIntoConstraints: Swift.Bool { get set }
+}
+public struct Coefficients {
+}
+public func + (c: CoreFoundation.CGFloat, rhs: Cartography.Coefficients) -> Cartography.Coefficients
+public func + (lhs: Cartography.Coefficients, rhs: CoreFoundation.CGFloat) -> Cartography.Coefficients
+public func - (c: CoreFoundation.CGFloat, rhs: Cartography.Coefficients) -> Cartography.Coefficients
+public func - (lhs: Cartography.Coefficients, rhs: CoreFoundation.CGFloat) -> Cartography.Coefficients
+public func * (m: CoreFoundation.CGFloat, rhs: Cartography.Coefficients) -> Cartography.Coefficients
+public func * (lhs: Cartography.Coefficients, rhs: CoreFoundation.CGFloat) -> Cartography.Coefficients
+public func / (m: CoreFoundation.CGFloat, rhs: Cartography.Coefficients) -> Cartography.Coefficients
+public func / (lhs: Cartography.Coefficients, rhs: CoreFoundation.CGFloat) -> Cartography.Coefficients
+public protocol Compound {
+  var context: Cartography.Context { get }
+  var properties: [Cartography.Property] { get }
+}
+public protocol RelativeCompoundEquality : Cartography.Compound {
+}
+@discardableResult
+public func == <P>(lhs: P, rhs: Cartography.Expression<P>) -> [UIKit.NSLayoutConstraint] where P : Cartography.RelativeCompoundEquality
+@discardableResult
+public func == <P>(lhs: P, rhs: P) -> [UIKit.NSLayoutConstraint] where P : Cartography.RelativeCompoundEquality
+public protocol RelativeCompoundInequality : Cartography.Compound {
+}
+@discardableResult
+public func <= <P>(lhs: P, rhs: P) -> [UIKit.NSLayoutConstraint] where P : Cartography.RelativeCompoundInequality
+@discardableResult
+public func >= <P>(lhs: P, rhs: P) -> [UIKit.NSLayoutConstraint] where P : Cartography.RelativeCompoundInequality
+@discardableResult
+public func <= <P>(lhs: P, rhs: Cartography.Expression<P>) -> [UIKit.NSLayoutConstraint] where P : Cartography.RelativeCompoundInequality
+@discardableResult
+public func >= <P>(lhs: P, rhs: Cartography.Expression<P>) -> [UIKit.NSLayoutConstraint] where P : Cartography.RelativeCompoundInequality
+public func constrain(clear group: Cartography.ConstraintGroup)
+@discardableResult
+public func constrain<A>(_ item: A, replace group: Cartography.ConstraintGroup = .init(), block: (A.ProxyType) -> Swift.Void) -> Cartography.ConstraintGroup where A : Cartography.LayoutItem
+@discardableResult
+public func constrain<A, B>(_ item1: A, _ item2: B, replace group: Cartography.ConstraintGroup = .init(), block: (A.ProxyType, B.ProxyType) -> Swift.Void) -> Cartography.ConstraintGroup where A : Cartography.LayoutItem, B : Cartography.LayoutItem
+@discardableResult
+public func constrain<A, B, C>(_ item1: A, _ item2: B, _ item3: C, replace group: Cartography.ConstraintGroup = .init(), block: (A.ProxyType, B.ProxyType, C.ProxyType) -> Swift.Void) -> Cartography.ConstraintGroup where A : Cartography.LayoutItem, B : Cartography.LayoutItem, C : Cartography.LayoutItem
+@discardableResult
+public func constrain<A, B, C, D>(_ item1: A, _ item2: B, _ item3: C, _ item4: D, replace group: Cartography.ConstraintGroup = .init(), block: (A.ProxyType, B.ProxyType, C.ProxyType, D.ProxyType) -> Swift.Void) -> Cartography.ConstraintGroup where A : Cartography.LayoutItem, B : Cartography.LayoutItem, C : Cartography.LayoutItem, D : Cartography.LayoutItem
+@discardableResult
+public func constrain<A, B, C, D, E>(_ item1: A, _ item2: B, _ item3: C, _ item4: D, _ item5: E, replace group: Cartography.ConstraintGroup = .init(), block: (A.ProxyType, B.ProxyType, C.ProxyType, D.ProxyType, E.ProxyType) -> Swift.Void) -> Cartography.ConstraintGroup where A : Cartography.LayoutItem, B : Cartography.LayoutItem, C : Cartography.LayoutItem, D : Cartography.LayoutItem, E : Cartography.LayoutItem
+@discardableResult
+public func constrain<A, B, C, D, E, F>(_ item1: A, _ item2: B, _ item3: C, _ item4: D, _ item5: E, _ item6: F, replace group: Cartography.ConstraintGroup = .init(), block: (A.ProxyType, B.ProxyType, C.ProxyType, D.ProxyType, E.ProxyType, F.ProxyType) -> Swift.Void) -> Cartography.ConstraintGroup where A : Cartography.LayoutItem, B : Cartography.LayoutItem, C : Cartography.LayoutItem, D : Cartography.LayoutItem, E : Cartography.LayoutItem, F : Cartography.LayoutItem
+@discardableResult
+public func constrain<A, B, C, D, E, F, G>(_ item1: A, _ item2: B, _ item3: C, _ item4: D, _ item5: E, _ item6: F, _ item7: G, replace group: Cartography.ConstraintGroup = .init(), block: (A.ProxyType, B.ProxyType, C.ProxyType, D.ProxyType, E.ProxyType, F.ProxyType, G.ProxyType) -> Swift.Void) -> Cartography.ConstraintGroup where A : Cartography.LayoutItem, B : Cartography.LayoutItem, C : Cartography.LayoutItem, D : Cartography.LayoutItem, E : Cartography.LayoutItem, F : Cartography.LayoutItem, G : Cartography.LayoutItem
+@discardableResult
+public func constrain<A, B, C, D, E, F, G, H>(_ item1: A, _ item2: B, _ item3: C, _ item4: D, _ item5: E, _ item6: F, _ item7: G, _ item8: H, replace group: Cartography.ConstraintGroup = .init(), block: (A.ProxyType, B.ProxyType, C.ProxyType, D.ProxyType, E.ProxyType, F.ProxyType, G.ProxyType, H.ProxyType) -> Swift.Void) -> Cartography.ConstraintGroup where A : Cartography.LayoutItem, B : Cartography.LayoutItem, C : Cartography.LayoutItem, D : Cartography.LayoutItem, E : Cartography.LayoutItem, F : Cartography.LayoutItem, G : Cartography.LayoutItem, H : Cartography.LayoutItem
+@discardableResult
+public func constrain<A, B, C, D, E, F, G, H, I>(_ item1: A, _ item2: B, _ item3: C, _ item4: D, _ item5: E, _ item6: F, _ item7: G, _ item8: H, _ item9: I, replace group: Cartography.ConstraintGroup = .init(), block: (A.ProxyType, B.ProxyType, C.ProxyType, D.ProxyType, E.ProxyType, F.ProxyType, G.ProxyType, H.ProxyType, I.ProxyType) -> Swift.Void) -> Cartography.ConstraintGroup where A : Cartography.LayoutItem, B : Cartography.LayoutItem, C : Cartography.LayoutItem, D : Cartography.LayoutItem, E : Cartography.LayoutItem, F : Cartography.LayoutItem, G : Cartography.LayoutItem, H : Cartography.LayoutItem, I : Cartography.LayoutItem
+@discardableResult
+public func constrain<A, B, C, D, E, F, G, H, I, J>(_ item1: A, _ item2: B, _ item3: C, _ item4: D, _ item5: E, _ item6: F, _ item7: G, _ item8: H, _ item9: I, _ item10: J, replace group: Cartography.ConstraintGroup = .init(), block: (A.ProxyType, B.ProxyType, C.ProxyType, D.ProxyType, E.ProxyType, F.ProxyType, G.ProxyType, H.ProxyType, I.ProxyType, J.ProxyType) -> Swift.Void) -> Cartography.ConstraintGroup where A : Cartography.LayoutItem, B : Cartography.LayoutItem, C : Cartography.LayoutItem, D : Cartography.LayoutItem, E : Cartography.LayoutItem, F : Cartography.LayoutItem, G : Cartography.LayoutItem, H : Cartography.LayoutItem, I : Cartography.LayoutItem, J : Cartography.LayoutItem
+@discardableResult
+public func constrain<T>(_ items: [T], replace group: Cartography.ConstraintGroup = .init(), block: ([T.ProxyType]) -> Swift.Void) -> Cartography.ConstraintGroup where T : Cartography.LayoutItem
+@discardableResult
+public func constrain<T, U>(_ items: [T : U], replace group: Cartography.ConstraintGroup = .init(), block: ([T : U.ProxyType]) -> Swift.Void) -> Cartography.ConstraintGroup where T : Swift.Hashable, U : Cartography.LayoutItem
+public class ConstraintGroup {
+  @available(macOS 10.10, iOS 8.0, *)
+  public var active: Swift.Bool {
+    get
+    set
+  }
+  public init()
+  @objc deinit
+}
+public typealias LayoutRelation = UIKit.NSLayoutConstraint.Relation
+@_hasMissingDesignatedInitializers public class Context {
+  @objc deinit
+}
+public struct Dimension : Cartography.Property, Cartography.NumericalEquality, Cartography.RelativeEquality, Cartography.NumericalInequality, Cartography.RelativeInequality, Cartography.Addition, Cartography.Multiplication {
+  public let attribute: Cartography.LayoutAttribute
+  public let context: Cartography.Context
+  public let item: Swift.AnyObject
+}
+@discardableResult
+public func distribute(by amount: CoreFoundation.CGFloat = 0.0, horizontally items: [Cartography.SupportsLeadingLayoutProxy & Cartography.SupportsTrailingLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func distribute(by amount: CoreFoundation.CGFloat = 0.0, horizontally first: Cartography.SupportsLeadingLayoutProxy & Cartography.SupportsTrailingLayoutProxy, _ rest: (Cartography.SupportsLeadingLayoutProxy & Cartography.SupportsTrailingLayoutProxy)...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func distribute(by amount: CoreFoundation.CGFloat = 0.0, leftToRight items: [Cartography.SupportsLeftLayoutProxy & Cartography.SupportsRightLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func distribute(by amount: CoreFoundation.CGFloat = 0.0, leftToRight first: Cartography.SupportsLeftLayoutProxy & Cartography.SupportsRightLayoutProxy, _ rest: (Cartography.SupportsLeftLayoutProxy & Cartography.SupportsRightLayoutProxy)...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func distribute(by amount: CoreFoundation.CGFloat = 0.0, vertically items: [Cartography.SupportsBottomLayoutProxy & Cartography.SupportsTopLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func distribute(by amount: CoreFoundation.CGFloat = 0.0, vertically first: Cartography.SupportsBottomLayoutProxy & Cartography.SupportsTopLayoutProxy, _ rest: (Cartography.SupportsBottomLayoutProxy & Cartography.SupportsTopLayoutProxy)...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func distribute(equalWidth items: [Cartography.SupportsWidthLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func distribute(equalWidth first: Cartography.SupportsWidthLayoutProxy, _ rest: (Cartography.SupportsWidthLayoutProxy)...) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func distribute(equalHeight items: [Cartography.SupportsHeightLayoutProxy]) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func distribute(equalHeight first: Cartography.SupportsHeightLayoutProxy, _ rest: (Cartography.SupportsHeightLayoutProxy)...) -> [UIKit.NSLayoutConstraint]
+public struct Edge : Cartography.Property, Cartography.RelativeEquality, Cartography.RelativeInequality, Cartography.Addition, Cartography.Multiplication {
+  public let attribute: Cartography.LayoutAttribute
+  public let context: Cartography.Context
+  public let item: Swift.AnyObject
+}
+public struct Edges : Cartography.Compound, Cartography.RelativeCompoundEquality, Cartography.RelativeCompoundInequality {
+  public let context: Cartography.Context
+  public let properties: [Cartography.Property]
+  public func inseted(top: CoreFoundation.CGFloat, leading: CoreFoundation.CGFloat, bottom: CoreFoundation.CGFloat, trailing: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Edges>
+  public func inseted(horizontally: CoreFoundation.CGFloat, vertically: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Edges>
+  public func inseted(horizontally: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Edges>
+  public func inseted(vertically: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Edges>
+  public func inseted(by value: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Edges>
+  public func inseted(by insets: UIKit.UIEdgeInsets) -> Cartography.Expression<Cartography.Edges>
+}
+public func inset(_ edges: Cartography.Edges, _ all: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Edges>
+public func inset(_ edges: Cartography.Edges, _ horizontal: CoreFoundation.CGFloat, _ vertical: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Edges>
+public func inset(_ edges: Cartography.Edges, horizontally horizontal: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Edges>
+public func inset(_ edges: Cartography.Edges, vertically vertical: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Edges>
+public func inset(_ edges: Cartography.Edges, _ top: CoreFoundation.CGFloat, _ leading: CoreFoundation.CGFloat, _ bottom: CoreFoundation.CGFloat, _ trailing: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Edges>
+public func inset(_ edges: Cartography.Edges, _ insets: UIKit.UIEdgeInsets) -> Cartography.Expression<Cartography.Edges>
+public struct Expression<T> {
+}
+@available(iOS 9.0, tvOS 9.0, *)
+public typealias LayoutGuide = UIKit.UILayoutGuide
+@available(iOS 9.0, tvOS 9.0, *)
+extension UIKit.UILayoutGuide : Cartography.LayoutItem {
+  @available(iOS 9.0, tvOS 9.0, *)
+  @_Concurrency.MainActor(unsafe) public func asProxy(context: Cartography.Context) -> Cartography.LayoutGuideProxy
+  public typealias ProxyType = Cartography.LayoutGuideProxy
+}
+@available(iOS 9.0, tvOS 9.0, macOS 10.11, *)
+final public class LayoutGuideProxy : Cartography.SupportsPositioningLayoutProxy {
+  final public let context: Cartography.Context
+  final public var item: Swift.AnyObject {
+    get
+  }
+  public init(context: Cartography.Context, item: Cartography.LayoutGuide)
+  final public var owningView: Cartography.ViewProxy? {
+    get
+  }
+  @objc deinit
+}
+public protocol LayoutItem : AnyObject {
+  associatedtype ProxyType : Cartography.LayoutProxy
+  func asProxy(context: Cartography.Context) -> Self.ProxyType
+}
+extension Cartography.LayoutItem {
+  public func asProxy() -> Self.ProxyType
+}
+public protocol LayoutProxy : AnyObject {
+  var context: Cartography.Context { get }
+  var item: Swift.AnyObject { get }
+}
+public protocol SupportsTopLayoutProxy : Cartography.LayoutProxy {
+}
+extension Cartography.SupportsTopLayoutProxy {
+  public var top: Cartography.Edge {
+    get
+  }
+  @available(iOS 8.0, *)
+  public var topMargin: Cartography.Edge {
+    get
+  }
+}
+public protocol SupportsBottomLayoutProxy : Cartography.LayoutProxy {
+}
+extension Cartography.SupportsBottomLayoutProxy {
+  public var bottom: Cartography.Edge {
+    get
+  }
+  @available(iOS 8.0, *)
+  public var bottomMargin: Cartography.Edge {
+    get
+  }
+}
+public protocol SupportsRightLayoutProxy : Cartography.LayoutProxy {
+}
+extension Cartography.SupportsRightLayoutProxy {
+  public var right: Cartography.Edge {
+    get
+  }
+  @available(iOS 8.0, *)
+  public var rightMargin: Cartography.Edge {
+    get
+  }
+}
+public protocol SupportsLeftLayoutProxy : Cartography.LayoutProxy {
+}
+extension Cartography.SupportsLeftLayoutProxy {
+  public var left: Cartography.Edge {
+    get
+  }
+  @available(iOS 8.0, *)
+  public var leftMargin: Cartography.Edge {
+    get
+  }
+}
+public protocol SupportsLeadingLayoutProxy : Cartography.LayoutProxy {
+}
+extension Cartography.SupportsLeadingLayoutProxy {
+  public var leading: Cartography.Edge {
+    get
+  }
+  @available(iOS 8.0, *)
+  public var leadingMargin: Cartography.Edge {
+    get
+  }
+}
+public protocol SupportsTrailingLayoutProxy : Cartography.LayoutProxy {
+}
+extension Cartography.SupportsTrailingLayoutProxy {
+  public var trailing: Cartography.Edge {
+    get
+  }
+  @available(iOS 8.0, *)
+  public var trailingMargin: Cartography.Edge {
+    get
+  }
+}
+public protocol SupportsEdgesLayoutProxy : Cartography.SupportsBottomLayoutProxy, Cartography.SupportsLeadingLayoutProxy, Cartography.SupportsLeftLayoutProxy, Cartography.SupportsRightLayoutProxy, Cartography.SupportsTopLayoutProxy, Cartography.SupportsTrailingLayoutProxy {
+}
+extension Cartography.SupportsEdgesLayoutProxy {
+  public var edges: Cartography.Edges {
+    get
+  }
+  @available(iOS 8.0, *)
+  public var edgesWithinMargins: Cartography.Edges {
+    get
+  }
+}
+public protocol SupportsCenterXLayoutProxy : Cartography.LayoutProxy {
+}
+extension Cartography.SupportsCenterXLayoutProxy {
+  public var centerX: Cartography.Edge {
+    get
+  }
+  @available(iOS 8.0, *)
+  public var centerXWithinMargins: Cartography.Edge {
+    get
+  }
+}
+public protocol SupportsCenterYLayoutProxy : Cartography.LayoutProxy {
+}
+extension Cartography.SupportsCenterYLayoutProxy {
+  public var centerY: Cartography.Edge {
+    get
+  }
+  @available(iOS 8.0, *)
+  public var centerYWithinMargins: Cartography.Edge {
+    get
+  }
+}
+public protocol SupportsCenteringLayoutProxy : Cartography.SupportsCenterXLayoutProxy, Cartography.SupportsCenterYLayoutProxy {
+}
+extension Cartography.SupportsCenteringLayoutProxy {
+  public var center: Cartography.Point {
+    get
+  }
+  @available(iOS 8.0, *)
+  public var centerWithinMargins: Cartography.Point {
+    get
+  }
+}
+public protocol SupportsWidthLayoutProxy : Cartography.LayoutProxy {
+}
+extension Cartography.SupportsWidthLayoutProxy {
+  public var width: Cartography.Dimension {
+    get
+  }
+}
+public protocol SupportsHeightLayoutProxy : Cartography.LayoutProxy {
+}
+extension Cartography.SupportsHeightLayoutProxy {
+  public var height: Cartography.Dimension {
+    get
+  }
+}
+public protocol SupportsSizeLayoutProxy : Cartography.SupportsHeightLayoutProxy, Cartography.SupportsWidthLayoutProxy {
+}
+extension Cartography.SupportsSizeLayoutProxy {
+  public var size: Cartography.Size {
+    get
+  }
+}
+public protocol SupportsBaselineLayoutProxy : Cartography.LayoutProxy {
+}
+extension Cartography.SupportsBaselineLayoutProxy {
+  public var lastBaseline: Cartography.Edge {
+    get
+  }
+  public var baseline: Cartography.Edge {
+    get
+  }
+  @available(iOS 8.0, macOS 10.11, *)
+  public var firstBaseline: Cartography.Edge {
+    get
+  }
+}
+public protocol SupportsPositioningLayoutProxy : Cartography.SupportsCenteringLayoutProxy, Cartography.SupportsEdgesLayoutProxy, Cartography.SupportsSizeLayoutProxy {
+}
+@_hasMissingDesignatedInitializers final public class LayoutSupport : Cartography.LayoutItem {
+  final public func asProxy(context: Cartography.Context) -> Cartography.LayoutSupportProxy
+  public typealias ProxyType = Cartography.LayoutSupportProxy
+  @objc deinit
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var car_topLayoutGuide: Cartography.LayoutSupport {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var car_bottomLayoutGuide: Cartography.LayoutSupport {
+    get
+  }
+}
+final public class LayoutSupportProxy : Cartography.SupportsHeightLayoutProxy, Cartography.SupportsTopLayoutProxy, Cartography.SupportsBottomLayoutProxy {
+  final public let context: Cartography.Context
+  final public var item: Swift.AnyObject {
+    get
+  }
+  public init(context: Cartography.Context, item: Cartography.LayoutSupport)
+  @objc deinit
+}
+public struct Point : Cartography.Compound, Cartography.RelativeCompoundEquality, Cartography.RelativeCompoundInequality {
+  public let context: Cartography.Context
+  public let properties: [Cartography.Property]
+}
+public typealias LayoutPriority = UIKit.UILayoutPriority
+precedencegroup CarthographyPriorityPrecedence {
+  higherThan: AssignmentPrecedence
+  lowerThan: ComparisonPrecedence
+}
+infix operator ~ : CarthographyPriorityPrecedence
+@discardableResult
+public func ~ (lhs: UIKit.NSLayoutConstraint, rhs: Cartography.LayoutPriority) -> UIKit.NSLayoutConstraint
+@discardableResult
+public func ~ (lhs: UIKit.NSLayoutConstraint, rhs: Swift.Float) -> UIKit.NSLayoutConstraint
+@discardableResult
+public func ~ (lhs: [UIKit.NSLayoutConstraint], rhs: Cartography.LayoutPriority) -> [UIKit.NSLayoutConstraint]
+@discardableResult
+public func ~ (lhs: [UIKit.NSLayoutConstraint], rhs: Swift.Float) -> [UIKit.NSLayoutConstraint]
+public typealias LayoutAttribute = UIKit.NSLayoutConstraint.Attribute
+public protocol Property {
+  var attribute: Cartography.LayoutAttribute { get }
+  var context: Cartography.Context { get }
+  var item: Swift.AnyObject { get }
+}
+public protocol NumericalEquality : Cartography.Property {
+}
+@discardableResult
+public func == (lhs: Cartography.NumericalEquality, rhs: CoreFoundation.CGFloat) -> UIKit.NSLayoutConstraint
+public protocol RelativeEquality : Cartography.Property {
+}
+@discardableResult
+public func == <P>(lhs: P, rhs: Cartography.Expression<P>) -> UIKit.NSLayoutConstraint where P : Cartography.RelativeEquality
+@discardableResult
+public func == <P>(lhs: P, rhs: P) -> UIKit.NSLayoutConstraint where P : Cartography.RelativeEquality
+public protocol NumericalInequality : Cartography.Property {
+}
+@discardableResult
+public func <= (lhs: Cartography.NumericalInequality, rhs: CoreFoundation.CGFloat) -> UIKit.NSLayoutConstraint
+@discardableResult
+public func >= (lhs: Cartography.NumericalInequality, rhs: CoreFoundation.CGFloat) -> UIKit.NSLayoutConstraint
+public protocol RelativeInequality : Cartography.Property {
+}
+@discardableResult
+public func <= <P>(lhs: P, rhs: P) -> UIKit.NSLayoutConstraint where P : Cartography.RelativeInequality
+@discardableResult
+public func >= <P>(lhs: P, rhs: P) -> UIKit.NSLayoutConstraint where P : Cartography.RelativeInequality
+@discardableResult
+public func <= <P>(lhs: P, rhs: Cartography.Expression<P>) -> UIKit.NSLayoutConstraint where P : Cartography.RelativeInequality
+@discardableResult
+public func >= <P>(lhs: P, rhs: Cartography.Expression<P>) -> UIKit.NSLayoutConstraint where P : Cartography.RelativeInequality
+public protocol Addition : Cartography.Property {
+}
+public func + <P>(c: CoreFoundation.CGFloat, rhs: P) -> Cartography.Expression<P> where P : Cartography.Addition
+public func + <P>(lhs: P, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<P> where P : Cartography.Addition
+public func + <P>(c: CoreFoundation.CGFloat, rhs: Cartography.Expression<P>) -> Cartography.Expression<P> where P : Cartography.Addition
+public func + <P>(lhs: Cartography.Expression<P>, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<P> where P : Cartography.Addition
+public func - <P>(c: CoreFoundation.CGFloat, rhs: P) -> Cartography.Expression<P> where P : Cartography.Addition
+public func - <P>(lhs: P, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<P> where P : Cartography.Addition
+public func - <P>(c: CoreFoundation.CGFloat, rhs: Cartography.Expression<P>) -> Cartography.Expression<P> where P : Cartography.Addition
+public func - <P>(lhs: Cartography.Expression<P>, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<P> where P : Cartography.Addition
+public func + (lhs: Cartography.LayoutSupport, c: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.LayoutSupport>
+public func - (lhs: Cartography.LayoutSupport, c: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.LayoutSupport>
+public protocol Multiplication : Cartography.Property {
+}
+public func * <P>(m: CoreFoundation.CGFloat, rhs: Cartography.Expression<P>) -> Cartography.Expression<P> where P : Cartography.Multiplication
+public func * <P>(lhs: Cartography.Expression<P>, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<P> where P : Cartography.Multiplication
+public func * <P>(m: CoreFoundation.CGFloat, rhs: P) -> Cartography.Expression<P> where P : Cartography.Multiplication
+public func * <P>(lhs: P, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<P> where P : Cartography.Multiplication
+public func / <P>(lhs: Cartography.Expression<P>, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<P> where P : Cartography.Multiplication
+public func / <P>(lhs: P, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<P> where P : Cartography.Multiplication
+public struct Size : Cartography.Compound, Cartography.RelativeCompoundEquality, Cartography.RelativeCompoundInequality {
+  public let context: Cartography.Context
+  public let properties: [Cartography.Property]
+}
+public func * (m: CoreFoundation.CGFloat, rhs: Cartography.Expression<Cartography.Size>) -> Cartography.Expression<Cartography.Size>
+public func * (lhs: Cartography.Expression<Cartography.Size>, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Size>
+public func * (m: CoreFoundation.CGFloat, rhs: Cartography.Size) -> Cartography.Expression<Cartography.Size>
+public func * (lhs: Cartography.Size, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Size>
+public func / (lhs: Cartography.Expression<Cartography.Size>, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Size>
+public func / (lhs: Cartography.Size, rhs: CoreFoundation.CGFloat) -> Cartography.Expression<Cartography.Size>
+public typealias View = UIKit.UIView
+extension UIKit.UIView : Cartography.LayoutItem {
+  @_Concurrency.MainActor(unsafe) public func asProxy(context: Cartography.Context) -> Cartography.ViewProxy
+  public typealias ProxyType = Cartography.ViewProxy
+}
+final public class ViewProxy : Cartography.SupportsPositioningLayoutProxy, Cartography.SupportsBaselineLayoutProxy, Cartography.AutoresizingMaskLayoutProxy {
+  final public var context: Cartography.Context
+  final public var item: Swift.AnyObject {
+    get
+  }
+  final public var translatesAutoresizingMaskIntoConstraints: Swift.Bool {
+    get
+    set(value)
+  }
+  public init(context: Cartography.Context, view: Cartography.View)
+  final public var superview: Cartography.ViewProxy? {
+    get
+  }
+  @available(iOS 11.0, tvOS 11.0, *)
+  final public var safeAreaLayoutGuide: Cartography.LayoutGuideProxy {
+    get
+  }
+  @available(iOS 9.0, tvOS 9.0, *)
+  final public var layoutMarginsGuide: Cartography.LayoutGuideProxy {
+    get
+  }
+  @available(iOS 9.0, tvOS 9.0, *)
+  final public var readableContentGuide: Cartography.LayoutGuideProxy {
+    get
+  }
+  @objc deinit
+}

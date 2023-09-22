@@ -1,0 +1,11 @@
+framework module TestLibITR {
+  umbrella header "TestLibITR.h"
+
+  export *
+  module * { export * }
+}
+
+module TestLibITR.Swift {
+  header "TestLibITR-Swift.h"
+  requires objc
+}
